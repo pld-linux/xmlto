@@ -6,7 +6,7 @@ Release:	1
 Epoch:		0
 License:	GPL
 Group:		Applications/System
-Source0:	ftp://cyberelk.net/tim/data/xmlto/stable/%{name}-%{version}.tar.bz2
+Source0:	http://cyberelk.net/tim/data/xmlto/stable/%{name}-%{version}.tar.bz2
 # Source0-md5:	c11226c3c0dabb245c191cbf39c6fcd8
 URL:		http://cyberelk.net/tim/xmlto/
 BuildRequires:	autoconf
