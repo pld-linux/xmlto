@@ -11,6 +11,7 @@ Source0:	http://cyberelk.net/tim/data/xmlto/stable/%{name}-%{version}.tar.bz2
 URL:		http://cyberelk.net/tim/xmlto/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	util-linux
 BuildRequires:	libxslt-progs
 BuildRequires:	docbook-dtd42-xml
 BuildRequires:	docbook-style-xsl >= 1.56.0
