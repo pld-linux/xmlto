@@ -1,5 +1,5 @@
-Summary:	A tool for converting XML files to various formats.
-Summary(pl):	Narzêdzie do konwersji plików XML do ró¿nych formatów.
+Summary:	A tool for converting XML files to various formats
+Summary(pl):	Narzêdzie do konwersji plików XML do ró¿nych formatów
 Name:		xmlto
 Version:	0.0.15
 Release:	1
@@ -11,10 +11,10 @@ Source0:	http://cyberelk.net/tim/data/xmlto/stable/%{name}-%{version}.tar.bz2
 URL:		http://cyberelk.net/tim/xmlto/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	util-linux
-BuildRequires:	libxslt-progs
 BuildRequires:	docbook-dtd42-xml
 BuildRequires:	docbook-style-xsl >= 1.56.0
+BuildRequires:	libxslt-progs
+BuildRequires:	util-linux
 Requires:	docbook-dtd42-xml
 Requires:	docbook-style-xsl >= 1.56.0
 Requires:	passivetex >= 1.20
@@ -25,8 +25,8 @@ This is a package for converting XML files to various formats using
 XSL stylesheets.
 
 %description -l pl
-Jest to pakiet do konwersji plików w formacie XML do innych formatów,
-u¿ywaj±c do tego celu styli XSL
+Jest to pakiet do konwersji plików w formacie XML do innych formatów
+przy u¿yciu styli XSL.
 
 %prep
 %setup -q
