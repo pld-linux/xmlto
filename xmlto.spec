@@ -18,6 +18,7 @@ BuildRequires:	util-linux
 Requires:	docbook-dtd42-xml
 Requires:	docbook-style-xsl >= 1.56.0
 Requires:	passivetex >= 1.20
+Obsoletes:	refentry2man
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -38,11 +39,26 @@ przy u¿yciu styli XSL.
 %configure
 %{__make}
 
+cat >refentry2man<<EOF
+#!/bin/sh
+XMLTO_TMPFILE=\${TMPDIR:-/tmp}/\$(mktemp xmltoXXXXXX)
+XMLTO_TMPDIR=\${TMPDIR:-/tmp}/\$(mktemp xmltodirXXXXXX)
+rm -rf \$XMLTO_TMPDIR
+mkdir -p \$XMLTO_TMPDIR
+cat - > \$XMLTO_TMPFILE
+xmlto -o \$XMLTO_TMPDIR man \$XMLTO_TMPFILE >/dev/null
+cat \$XMLTO_TMPDIR/*
+rm -f \$XMLTO_TMPFILE
+rm -rf \$XMLTO_TMPDIR 
+EOF
+
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf $RPM_BUILD_ROOT%{_bindir}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+install refentry2man $RPM_BUILD_ROOT%{_bindir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
