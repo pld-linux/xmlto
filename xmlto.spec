@@ -18,6 +18,8 @@ BuildRequires:	util-linux
 Requires:	docbook-dtd42-xml
 Requires:	docbook-style-xsl >= 1.56.0
 Requires:	passivetex >= 1.20
+# for getopt
+Requires:	util-linux
 Obsoletes:	refentry2man
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
