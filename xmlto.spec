@@ -2,7 +2,7 @@ Summary:	A tool for converting XML files to various formats
 Summary(pl):	Narzêdzie do konwersji plików XML do ró¿nych formatów
 Name:		xmlto
 Version:	0.0.18
-Release:	1
+Release:	2
 Epoch:		0
 License:	GPL
 Group:		Applications/System
