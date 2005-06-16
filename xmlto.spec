@@ -2,7 +2,7 @@ Summary:	A tool for converting XML files to various formats
 Summary(pl):	Narzêdzie do konwersji plików XML do ró¿nych formatów
 Name:		xmlto
 Version:	0.0.18
-Release:	5
+Release:	6
 Epoch:		0
 License:	GPL
 Group:		Applications/System
@@ -17,6 +17,7 @@ BuildRequires:	libxslt-progs
 BuildRequires:	util-linux
 Requires:	docbook-dtd42-xml
 Requires:	docbook-style-xsl >= 1.56.0
+Requires:	libxslt-progs
 Requires:	passivetex >= 1.20
 # for getopt
 Requires:	util-linux
