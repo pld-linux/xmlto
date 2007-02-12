@@ -1,5 +1,5 @@
 Summary:	A tool for converting XML files to various formats
-Summary(pl):	Narz阣zie do konwersji plik體 XML do r罂nych format體
+Summary(pl.UTF-8):   Narz臋dzie do konwersji plik贸w XML do r贸偶nych format贸w
 Name:		xmlto
 Version:	0.0.18
 Release:	6
@@ -28,9 +28,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This is a package for converting XML files to various formats using
 XSL stylesheets.
 
-%description -l pl
-Jest to pakiet do konwersji plik體 w formacie XML do innych format體
-przy u縴ciu styli XSL.
+%description -l pl.UTF-8
+Jest to pakiet do konwersji plik贸w w formacie XML do innych format贸w
+przy u偶yciu styli XSL.
 
 %prep
 %setup -q
