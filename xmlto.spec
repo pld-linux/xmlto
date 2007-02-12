@@ -1,5 +1,5 @@
 Summary:	A tool for converting XML files to various formats
-Summary(pl.UTF-8):   Narzędzie do konwersji plików XML do różnych formatów
+Summary(pl.UTF-8):	Narzędzie do konwersji plików XML do różnych formatów
 Name:		xmlto
 Version:	0.0.18
 Release:	6
