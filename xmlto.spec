@@ -1,16 +1,16 @@
 Summary:	A tool for converting XML files to various formats
 Summary(pl.UTF-8):	Narzędzie do konwersji plików XML do różnych formatów
 Name:		xmlto
-Version:	0.0.18
-Release:	6
+Version:	0.0.19
+Release:	1
 Epoch:		0
-License:	GPL
+License:	GPL v2
 Group:		Applications/System
 Source0:	http://cyberelk.net/tim/data/xmlto/stable/%{name}-%{version}.tar.bz2
-# Source0-md5:	1a06471b70eb27a6aca5d1b3a144f9b0
+# Source0-md5:	c536777e13bd5a03a4891b5ccaea0d00
 URL:		http://cyberelk.net/tim/xmlto/
 BuildRequires:	autoconf
-BuildRequires:	automake
+BuildRequires:	automake >= 1.6
 BuildRequires:	docbook-dtd42-xml
 BuildRequires:	docbook-style-xsl >= 1.56.0
 BuildRequires:	libxslt-progs
