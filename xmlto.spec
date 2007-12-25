@@ -2,7 +2,7 @@ Summary:	A tool for converting XML files to various formats
 Summary(pl.UTF-8):	Narzędzie do konwersji plików XML do różnych formatów
 Name:		xmlto
 Version:	0.0.19
-Release:	5
+Release:	6
 Epoch:		0
 License:	GPL v2
 Group:		Applications/System
@@ -45,8 +45,8 @@ przy użyciu styli XSL.
 
 cat > refentry2man <<'EOF'
 #!/bin/sh
-XMLTO_TMPFILE=$(mktemp -p xmltoXXXXXX)
-XMLTO_TMPDIR=$(mktemp -d -p xmltodirXXXXXX)
+XMLTO_TMPFILE=$(mktemp -t xmltoXXXXXX)
+XMLTO_TMPDIR=$(mktemp -d -t xmltodirXXXXXX)
 cat - > $XMLTO_TMPFILE
 xmlto -o $XMLTO_TMPDIR man $XMLTO_TMPFILE >/dev/null
 cat $XMLTO_TMPDIR/*
