@@ -2,7 +2,7 @@ Summary:	A tool for converting XML files to various formats
 Summary(pl.UTF-8):	Narzędzie do konwersji plików XML do różnych formatów
 Name:		xmlto
 Version:	0.0.19
-Release:	1
+Release:	2
 Epoch:		0
 License:	GPL v2
 Group:		Applications/System
@@ -18,6 +18,7 @@ BuildRequires:	util-linux
 Requires:	docbook-dtd42-xml
 Requires:	docbook-style-xsl >= 1.56.0
 Requires:	libxslt-progs
+Requires:	mktemp >= 1.5-19
 Requires:	passivetex >= 1.20
 # for getopt
 Requires:	util-linux
@@ -44,10 +45,8 @@ przy użyciu styli XSL.
 
 cat > refentry2man <<'EOF'
 #!/bin/sh
-XMLTO_TMPFILE=${TMPDIR:-/tmp}/$(mktemp xmltoXXXXXX)
-XMLTO_TMPDIR=${TMPDIR:-/tmp}/$(mktemp xmltodirXXXXXX)
-rm -rf $XMLTO_TMPDIR
-mkdir -p $XMLTO_TMPDIR
+XMLTO_TMPFILE=$(mktemp xmltoXXXXXX)
+XMLTO_TMPDIR=$(mktemp -d xmltodirXXXXXX)
 cat - > $XMLTO_TMPFILE
 xmlto -o $XMLTO_TMPDIR man $XMLTO_TMPFILE >/dev/null
 cat $XMLTO_TMPDIR/*
@@ -56,7 +55,7 @@ rm -rf $XMLTO_TMPDIR
 EOF
 
 %install
-rm -rf $RPM_BUILD_ROOT%{_bindir}
+rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
