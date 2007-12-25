@@ -42,17 +42,17 @@ przy użyciu styli XSL.
 %configure
 %{__make}
 
-cat >refentry2man<<EOF
+cat > refentry2man <<'EOF'
 #!/bin/sh
-XMLTO_TMPFILE=\${TMPDIR:-/tmp}/\$(mktemp xmltoXXXXXX)
-XMLTO_TMPDIR=\${TMPDIR:-/tmp}/\$(mktemp xmltodirXXXXXX)
-rm -rf \$XMLTO_TMPDIR
-mkdir -p \$XMLTO_TMPDIR
-cat - > \$XMLTO_TMPFILE
-xmlto -o \$XMLTO_TMPDIR man \$XMLTO_TMPFILE >/dev/null
-cat \$XMLTO_TMPDIR/*
-rm -f \$XMLTO_TMPFILE
-rm -rf \$XMLTO_TMPDIR 
+XMLTO_TMPFILE=${TMPDIR:-/tmp}/$(mktemp xmltoXXXXXX)
+XMLTO_TMPDIR=${TMPDIR:-/tmp}/$(mktemp xmltodirXXXXXX)
+rm -rf $XMLTO_TMPDIR
+mkdir -p $XMLTO_TMPDIR
+cat - > $XMLTO_TMPFILE
+xmlto -o $XMLTO_TMPDIR man $XMLTO_TMPFILE >/dev/null
+cat $XMLTO_TMPDIR/*
+rm -f $XMLTO_TMPFILE
+rm -rf $XMLTO_TMPDIR
 EOF
 
 %install
