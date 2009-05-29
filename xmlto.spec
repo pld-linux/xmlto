@@ -1,13 +1,12 @@
 Summary:	A tool for converting XML files to various formats
 Summary(pl.UTF-8):	Narzędzie do konwersji plików XML do różnych formatów
 Name:		xmlto
-Version:	0.0.21
+Version:	0.0.22
 Release:	1
-Epoch:		0
 License:	GPL v2
 Group:		Applications/System
 Source0:	https://fedorahosted.org/releases/x/m/xmlto/%{name}-%{version}.tar.bz2
-# Source0-md5:	cc2039dedc81f1a56b06e5fdac6f7570
+# Source0-md5:	12f297dc7051e4fef08339980f88a1dd
 URL:		http://cyberelk.net/tim/software/xmlto/
 BuildRequires:	autoconf
 BuildRequires:	automake >= 1.6
