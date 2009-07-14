@@ -2,7 +2,7 @@ Summary:	A tool for converting XML files to various formats
 Summary(pl.UTF-8):	Narzędzie do konwersji plików XML do różnych formatów
 Name:		xmlto
 Version:	0.0.22
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Applications/System
 Source0:	https://fedorahosted.org/releases/x/m/xmlto/%{name}-%{version}.tar.bz2
@@ -18,7 +18,7 @@ Requires:	docbook-dtd42-xml
 Requires:	docbook-style-xsl >= 1.56.0
 Requires:	libxslt-progs
 Requires:	mktemp >= 1.5-19
-Requires:	passivetex >= 1.20
+Requires:	xmltex
 # for getopt
 Requires:	util-linux
 Obsoletes:	refentry2man
