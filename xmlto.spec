@@ -7,11 +7,13 @@ License:	GPL v2
 Group:		Applications/System
 Source0:	https://fedorahosted.org/releases/x/m/xmlto/%{name}-%{version}.tar.bz2
 # Source0-md5:	12f297dc7051e4fef08339980f88a1dd
+Patch0:		%{name}-no_which.patch
 URL:		http://cyberelk.net/tim/software/xmlto/
 BuildRequires:	autoconf
 BuildRequires:	automake >= 1.6
 BuildRequires:	docbook-dtd42-xml
 BuildRequires:	docbook-style-xsl >= 1.56.0
+BuildRequires:	libpaper
 BuildRequires:	libxslt-progs
 BuildRequires:	util-linux
 Requires:	docbook-dtd42-xml
@@ -21,6 +23,7 @@ Requires:	mktemp >= 1.5-19
 Requires:	xmltex
 # for getopt
 Requires:	util-linux
+Suggests:	libpaper
 Obsoletes:	refentry2man
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -34,6 +37,7 @@ przy użyciu styli XSL.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__aclocal}
