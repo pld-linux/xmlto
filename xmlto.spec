@@ -2,7 +2,7 @@ Summary:	A tool for converting XML files to various formats
 Summary(pl.UTF-8):	Narzędzie do konwersji plików XML do różnych formatów
 Name:		xmlto
 Version:	0.0.22
-Release:	4
+Release:	5
 License:	GPL v2
 Group:		Applications/System
 Source0:	https://fedorahosted.org/releases/x/m/xmlto/%{name}-%{version}.tar.bz2
@@ -23,6 +23,10 @@ Requires:	mktemp >= 1.5-19
 Requires:	xmltex
 # for getopt
 Requires:	util-linux
+# fop is required for --with-fop. It is quite rare usecase. Moreover fop is
+# have dependency (written in Java, requires several Java libs, takes long time
+# to execute %post), so we don't want user to force to install it.
+Suggests:	fop
 Suggests:	libpaper
 Obsoletes:	refentry2man
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
