@@ -1,12 +1,12 @@
 Summary:	A tool for converting XML files to various formats
 Summary(pl.UTF-8):	Narzędzie do konwersji plików XML do różnych formatów
 Name:		xmlto
-Version:	0.0.26
-Release:	2
+Version:	0.0.28
+Release:	1
 License:	GPL v2
 Group:		Applications/System
 Source0:	https://fedorahosted.org/releases/x/m/xmlto/%{name}-%{version}.tar.bz2
-# Source0-md5:	c90a47c774e0963581c1ba57235f64f4
+# Source0-md5:	93bab48d446c826399d130d959fe676f
 URL:		http://cyberelk.net/tim/software/xmlto/
 BuildRequires:	autoconf
 BuildRequires:	automake >= 1.6
@@ -23,7 +23,7 @@ Requires:	xmltex
 # for getopt
 Requires:	util-linux
 # fop is required for --with-fop. It is quite rare usecase. Moreover fop is
-# have dependency (written in Java, requires several Java libs, takes long time
+# heavy dependency (written in Java, requires several Java libs, takes long time
 # to execute %post), so we don't want user to force to install it.
 Suggests:	fop
 # for paperconf program
