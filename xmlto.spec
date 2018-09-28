@@ -5,7 +5,7 @@ Version:	0.0.28
 Release:	2
 License:	GPL v2
 Group:		Applications/System
-Source0:	https://fedorahosted.org/releases/x/m/xmlto/%{name}-%{version}.tar.bz2
+Source0:	http://releases.pagure.org/xmlto/%{name}-%{version}.tar.bz2
 # Source0-md5:	93bab48d446c826399d130d959fe676f
 URL:		http://cyberelk.net/tim/software/xmlto/
 BuildRequires:	autoconf
