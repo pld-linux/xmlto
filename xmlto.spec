@@ -11,7 +11,7 @@ URL:		http://cyberelk.net/tim/software/xmlto/
 BuildRequires:	autoconf
 BuildRequires:	automake >= 1.6
 BuildRequires:	docbook-dtd42-xml
-BuildRequires:	docbook-style-xsl >= 1.56.0
+BuildRequires:	docbook-style-xsl-nons >= 1.56.0
 BuildRequires:	libpaper
 BuildRequires:	libxslt-progs
 BuildRequires:	util-linux
