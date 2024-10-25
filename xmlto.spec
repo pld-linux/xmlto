@@ -1,12 +1,12 @@
 Summary:	A tool for converting XML files to various formats
 Summary(pl.UTF-8):	Narzędzie do konwersji plików XML do różnych formatów
 Name:		xmlto
-Version:	0.0.28
-Release:	2
+Version:	0.0.29
+Release:	1
 License:	GPL v2
-Group:		Applications/System
-Source0:	http://releases.pagure.org/xmlto/%{name}-%{version}.tar.bz2
-# Source0-md5:	93bab48d446c826399d130d959fe676f
+Group:		Applications/Text
+Source0:	https://releases.pagure.org/xmlto/%{name}-%{version}.tar.bz2
+# Source0-md5:	9d9e9b2ebfca1e453f5e1599b82c48cc
 URL:		http://cyberelk.net/tim/software/xmlto/
 BuildRequires:	autoconf
 BuildRequires:	automake >= 1.6
@@ -30,7 +30,7 @@ Suggests:	fop
 Suggests:	libpaper
 # this is the default; links/lynx/text-www-browser is also possible
 Suggests:	w3m
-Obsoletes:	refentry2man
+Obsoletes:	refentry2man < 0.5
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -79,7 +79,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS README
+%doc AUTHORS.md ChangeLog NEWS.md README.md THANKS.md
 %attr(755,root,root) %{_bindir}/refentry2man
 %attr(755,root,root) %{_bindir}/xmlif
 %attr(755,root,root) %{_bindir}/xmlto
